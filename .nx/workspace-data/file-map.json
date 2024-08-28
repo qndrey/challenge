@@ -1,0 +1,42 @@
+{
+  "version": "6.0",
+  "nxVersion": "19.6.3",
+  "deps": {
+    "nx": "19.6.3"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "nx",
+        "hash": "17165975525224888679"
+      },
+      {
+        "file": "package.json",
+        "hash": "454898574423178773"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "12990309872111536764"
+      },
+      {
+        "file": ".nx/nxw.js",
+        "hash": "11254603345854076312"
+      },
+      {
+        "file": "README.md",
+        "hash": "9213284854125402833"
+      },
+      {
+        "file": "nx.json",
+        "hash": "897726892812997380"
+      },
+      {
+        "file": "nx.bat",
+        "hash": "16119536321561623970"
+      }
+    ],
+    "projectFileMap": {}
+  }
+}
