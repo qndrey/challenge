@@ -11,14 +11,21 @@
   gap: 1rem;
 }
 
-form {
+.form {
   display: flex;
+  margin: 2rem;
+  border-radius: 6px;
+  background-color: rgb(227, 237, 248);
   flex-direction: column;
   border: 0.025rem solid #555;
   border-radius: 0.5rem;
   padding: 1rem;
   width: 15rem;
   gap: 1.5rem;
+}
+
+.input {
+  text-align: left;
 }
 
 .error {

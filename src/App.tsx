@@ -1,24 +1,15 @@
 import './App.css'
-import { Form } from './Form';
-
-const person = {
-  // person form config
-  // fields are: name, age, status (active/inactive), registered
-}
-
-const car = {
-  // car form config
-  // fields are: make (mercedes/bmw/toyota), year, color, pre-order
-}
+import { FormCard } from './components';
+import { personFormConfig, carFormConfig } from './config';
 
 /**
  * --- Reminder ---
  * - Please mind the file and folder structure. You can create new files or folders.
- * - You can use official React documentation.
+* - You can use official React documentation.
  * 
  * --- Instructions ---
  * Create a form component that renders a form based on the config object.
- *  - Render the form elements based on the config object.
+*  - Render the form elements based on the config object.
  *  - You don't need to have a default value for the fields. The ones in the screenshots are just examples.
  *  - You can use either controlled or uncontrolled inputs.
  * 
@@ -33,19 +24,14 @@ const car = {
  * - number
  * - boolean
  * - enum
- * 
+* 
  */
+
 function App() {
   return (
     <div className="container">
-      <div>
-        <h2>New Person</h2>
-        <Form config={person} />
-      </div>
-      <div>
-        <h2>New Car</h2>
-        <Form config={car} />
-      </div>
+      <FormCard title={'New Person'} config={personFormConfig} />
+      <FormCard title={'New Car'} config={carFormConfig} />
     </div>
   );
 }
