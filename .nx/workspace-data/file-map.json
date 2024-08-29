@@ -2,23 +2,45 @@
   "version": "6.0",
   "nxVersion": "19.6.3",
   "deps": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "@eslint/js": "^9.9.0",
+    "@nx/jest": "19.6.3",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^9.9.0",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.9",
+    "globals": "^15.9.0",
+    "jest": "^29.7.0",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.0.1",
+    "vite": "^5.4.1",
     "nx": "19.6.3"
   },
   "pathMappings": {},
-  "nxJsonPlugins": [],
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      }
+    }
+  ],
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "nx",
-        "hash": "17165975525224888679"
-      },
-      {
-        "file": "package.json",
-        "hash": "454898574423178773"
-      },
-      {
         "file": ".gitignore",
-        "hash": "12990309872111536764"
+        "hash": "13046175384202504187"
+      },
+      {
+        "file": ".nx/installation/package-lock.json",
+        "hash": "1802086694256447472"
+      },
+      {
+        "file": ".nx/installation/package.json",
+        "hash": "12579582372464840267"
       },
       {
         "file": ".nx/nxw.js",
@@ -26,15 +48,79 @@
       },
       {
         "file": "README.md",
-        "hash": "9213284854125402833"
+        "hash": "5222898940979069107"
       },
       {
-        "file": "nx.json",
-        "hash": "897726892812997380"
+        "file": "eslint.config.js",
+        "hash": "16145672096969245511"
+      },
+      {
+        "file": "index.html",
+        "hash": "4025202329384162906"
+      },
+      {
+        "file": "nx",
+        "hash": "17165975525224888679"
       },
       {
         "file": "nx.bat",
         "hash": "16119536321561623970"
+      },
+      {
+        "file": "nx.json",
+        "hash": "12239710955578092060"
+      },
+      {
+        "file": "package.json",
+        "hash": "13118786600059558560"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "11031087755242711252"
+      },
+      {
+        "file": "public/vite.svg",
+        "hash": "16046085400642193116"
+      },
+      {
+        "file": "src/App.css",
+        "hash": "3739391659270974612"
+      },
+      {
+        "file": "src/App.tsx",
+        "hash": "4238939368060857942"
+      },
+      {
+        "file": "src/assets/react.svg",
+        "hash": "16069471864800376455"
+      },
+      {
+        "file": "src/index.css",
+        "hash": "957896817323665666"
+      },
+      {
+        "file": "src/main.tsx",
+        "hash": "4563103331098945915"
+      },
+      {
+        "file": "src/vite-env.d.ts",
+        "hash": "12946363841406869089"
+      },
+      {
+        "file": "tsconfig.app.json",
+        "hash": "9377008515559181798"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "2365188958523842680"
+      },
+      {
+        "file": "tsconfig.node.json",
+        "hash": "13325416099155070725"
+      },
+      {
+        "file": "vite.config.ts",
+        "hash": "7008402861428644331"
       }
     ],
     "projectFileMap": {}
