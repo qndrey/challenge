@@ -1,50 +1,35 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React Challenge
 
-Currently, two official plugins are available:
+What we want from you is to create a form structure with dynamic rendering and basic validations based on a configuration that you'll create.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You'll render 2 dynamic forms (check the screenshot for reference) for a person, and a car. We expect you to match the same output as much as you can.
 
-## Expanding the ESLint configuration
+#### Dont mind to ask anything, and please walk us through your thought process.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## Requirements
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+* Create a configuration structure in TS, which allows you to render different input fields dynamically.
+    - Let's say the output is a person information, the application should be able to render relevant input fields for the person's name, age etc
+    - The configuration should support the following types:
+        * string
+        * number
+        * boolean
+        * enum
+* Create a basic validation checker.
+    - The configuration should support the following validations:
+        * required
+        * min
+        * max
+* Debounce the user input
+* Check if the code has any issues
+* Write a test for basic functionality
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+#### Please mind the file and overall structure.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Screenshots
+
+![App Screenshot](./demo.png)
+

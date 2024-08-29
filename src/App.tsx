@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { Form } from './Form';
 
+const person = {
+  // person form config
+  // fields are: name, age, status (active/inactive), registered
+}
+
+const car = {
+  // car form config
+  // fields are: make (mercedes/bmw/toyota), year, color, pre-order
+}
+
+/**
+ * --- Reminder ---
+ * Please mind the file and folder structure.
+ * You can create new files or folders.
+ * 
+ * --- Instructions ---
+ * Create a form component that renders a form based on the config object.
+ * When the form is submitted:
+ * - Check if all fields are valid.
+ * - If all fields are valid, log all form elements to the console.
+ * - If any field is invalid, display an error message.
+ * 
+ * --- Additional Info ---
+ * You need to support the following data types:
+ * - string
+ * - number
+ * - boolean
+ * - enum
+ */
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
+    <div className="container">
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h2>New Person</h2>
+        <Form config={person} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <div>
+        <h2>New Car</h2>
+        <Form config={car} />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
 export default App
