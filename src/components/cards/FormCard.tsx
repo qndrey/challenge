@@ -108,7 +108,9 @@ const FormCard: React.FC<FormCardProps> = ({ title, config }) => {
                 </div>
             ))}
             <form onSubmit={handleSubmit}>
-                <DefaultButton label='Save' type='submit' disabled={!validateForm()[0]} />
+                <DefaultButton label='Save' type='submit'
+                    className={validateForm()[0] ? 'button-valid' : 'button-invalid'}
+                />
             </form>
         </div>
     );
