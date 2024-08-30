@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TextInput from '../inputs/TextInput';
+import { TextInput, DefaultButton } from '../../components';
 import { FieldInput } from '../../types';
 
 type FormCardProps = {
@@ -42,8 +42,7 @@ const FormCard: React.FC<FormCardProps> = ({ title, config }) => {
         return error;
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
+    const validateForm = (): [boolean, Record<string, string>] => {
         let isValid = true;
         const newErrors: Record<string, string> = {};
 
@@ -54,6 +53,12 @@ const FormCard: React.FC<FormCardProps> = ({ title, config }) => {
                 isValid = false;
             }
         });
+        return [isValid, newErrors];
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        const [isValid, newErrors] = validateForm();
 
         if (isValid) {
             console.log('Form submitted:', formData);
@@ -103,7 +108,7 @@ const FormCard: React.FC<FormCardProps> = ({ title, config }) => {
                 </div>
             ))}
             <form onSubmit={handleSubmit}>
-                <button type='submit'>Save</button>
+                <DefaultButton label='Save' type='submit' disabled={!validateForm()[0]} />
             </form>
         </div>
     );
